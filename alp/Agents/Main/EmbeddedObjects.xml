@@ -3332,12 +3332,12 @@ DBWrite(agent.cake);]]></Code>
 		<PresentationId>1396369364119</PresentationId>
 		<ActiveObjectClass>
 			<PackageName>aac_factory</PackageName>
-			<ClassName>Trolley</ClassName>
+			<ClassName>Troll</ClassName>
 		</ActiveObjectClass>
 		<GenericParameterSubstitute>
 			<GenericParameterSubstituteReference>
 				<PackageName>aac_factory</PackageName>
-				<ClassName>Trolley</ClassName>
+				<ClassName>Troll</ClassName>
 				<ItemName>1429438648931</ItemName>
 			</GenericParameterSubstituteReference>
 		</GenericParameterSubstitute>

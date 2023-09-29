@@ -207,7 +207,6 @@ downtimeStart = time();</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="130" Height="30">
 				<EntryAction>//wait until next service is avaliable</EntryAction>
-				<ExitAction/>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>

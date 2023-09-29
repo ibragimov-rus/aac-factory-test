@@ -244,7 +244,6 @@ isEmpty = true;</ExitAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="130" Height="30">
 				<EntryAction>enterState(5);</EntryAction>
-				<ExitAction/>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>

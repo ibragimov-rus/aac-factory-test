@@ -303,7 +303,6 @@ statisticsDowntime.add(time() - downtimeStart);</ExitAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="140" Height="30">
 				<EntryAction>enterState(5);</EntryAction>
-				<ExitAction/>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>

@@ -12,11 +12,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
-		<Properties SourceId="1343809917481"
-              TargetId="1343809917473"
-              External="false"
-              Constant="false"
-              Array="false">
+		<Properties External="false" Constant="false" Array="false">
 			<Formula>(truckSand &gt; 0 &amp;&amp; sand&lt;sandStorageSize ? 600/minute() : 0)</Formula>
 			<Color/>
 			<ValveIndex>1</ValveIndex>
@@ -48,11 +44,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
-		<Properties SourceId="1343809917473"
-              TargetId="1343809917477"
-              External="false"
-              Constant="false"
-              Array="false">
+		<Properties External="false" Constant="false" Array="false">
 			<Formula>(sand &gt; 1 &amp;&amp; slurry &lt; slurryStorageSize ? 640/moveTime : 0)</Formula>
 			<Color/>
 			<ValveIndex>1</ValveIndex>
@@ -84,11 +76,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
-		<Properties SourceId="1343809917475"
-              TargetId="1343809917477"
-              External="false"
-              Constant="false"
-              Array="false">
+		<Properties External="false" Constant="false" Array="false">
 			<Formula>(gypsum &gt; 1 &amp;&amp; slurry &lt; slurryStorageSize ? 36/moveTime : 0)</Formula>
 			<Color/>
 			<ValveIndex>1</ValveIndex>
@@ -120,11 +108,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
-		<Properties SourceId="1343809917477"
-              TargetId="1343809917479"
-              External="false"
-              Constant="false"
-              Array="false">
+		<Properties External="false" Constant="false" Array="false">
 			<Formula>(mill &gt; 1 ? 400/minute() : 0)</Formula>
 			<Color/>
 			<ValveIndex>1</ValveIndex>
@@ -156,11 +140,7 @@
 		<PublicFlag>false</PublicFlag>
 		<PresentationFlag>true</PresentationFlag>
 		<ShowLabel>false</ShowLabel>
-		<Properties SourceId="1343809917483"
-              TargetId="1343809917475"
-              External="false"
-              Constant="false"
-              Array="false">
+		<Properties External="false" Constant="false" Array="false">
 			<Formula>(truckGypsum &gt; 0 &amp;&amp; gypsum &lt; gypsumStorageSize? 100/minute() : 0)</Formula>
 			<Color/>
 			<ValveIndex>1</ValveIndex>

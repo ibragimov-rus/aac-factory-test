@@ -295,7 +295,6 @@ moveTo(getX(), destination[1]);</EntryAction>
 			<ShowLabel>true</ShowLabel>
 			<Properties Width="120" Height="30">
 				<EntryAction>enterState(5);</EntryAction>
-				<ExitAction/>
 				<FillColor/>
 			</Properties>
 		</StatechartElement>
