@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Functions>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+		<ReturnType>double</ReturnType>
+		<Id>1344258765352</Id>
+		<Name><![CDATA[getUtilization]]></Name>
+		<X>-430</X>
+		<Y>97</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Body/>
+	</Function>
+	<Function AccessType="default" StaticFunction="false">
+		<ReturnModificator>VOID</ReturnModificator>
+		<ReturnType>void</ReturnType>
+		<Id>1346758348664</Id>
+		<Name><![CDATA[enterState]]></Name>
+		<X>-430</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Parameter>
+			<Name><![CDATA[state]]></Name>
+			<Type><![CDATA[int]]></Type>
+		</Parameter>
+		<Body/>
+	</Function>
+</Functions>

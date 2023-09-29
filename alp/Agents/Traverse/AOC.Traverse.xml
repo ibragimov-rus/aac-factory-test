@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActiveObjectClass>
+	<Id>1341576122356</Id>
+	<Name><![CDATA[Traverse]]></Name>
+	<StartupCode><![CDATA[states.add(0);]]></StartupCode>
+	<Generic>false</Generic>
+	<GenericParameter>
+		<Id>1429438648768</Id>
+		<Name><![CDATA[1429438648768]]></Name>
+		<GenericParameterValue Class="CodeValue">
+			<Code><![CDATA[T]]></Code>
+		</GenericParameterValue>
+		<GenericParameterLabel>Generic parameters:</GenericParameterLabel>
+	</GenericParameter>
+	<FlowChartsUsage>ENTITY</FlowChartsUsage>
+	<SamplesToKeep>100</SamplesToKeep>
+	<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+	<ElementsLimitValue>100</ElementsLimitValue>
+	<MakeDefaultViewArea>true</MakeDefaultViewArea>
+	<SceneGridColor/>
+	<SceneBackgroundColor/>
+	<SceneSkybox>null</SceneSkybox>
+	<AgentProperties>
+		<EnvironmentDefinesInitialLocation>false</EnvironmentDefinesInitialLocation>
+		<RotateAnimationTowardsMovement>false</RotateAnimationTowardsMovement>
+		<RotateAnimationVertically>false</RotateAnimationVertically>
+		<VelocityCode Class="CodeUnitValue">
+			<Code><![CDATA[speed]]></Code>
+			<Unit Class="SpeedUnits">MPS</Unit>
+		</VelocityCode>
+		<PhysicalLength Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalLength>
+		<PhysicalWidth Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalWidth>
+		<PhysicalHeight Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalHeight>
+	</AgentProperties>
+	<EnvironmentProperties>
+		<EnableSteps>false</EnableSteps>
+		<StepDurationCode Class="CodeUnitValue">
+			<Code><![CDATA[1.0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</StepDurationCode>
+		<SpaceType>CONTINUOUS</SpaceType>
+		<WidthCode>500</WidthCode>
+		<HeightCode>500</HeightCode>
+		<ZHeightCode>0</ZHeightCode>
+		<ColumnsCountCode>100</ColumnsCountCode>
+		<RowsCountCode>100</RowsCountCode>
+		<NeigborhoodType>MOORE</NeigborhoodType>
+		<LayoutType>USER_DEF</LayoutType>
+		<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+		<NetworkType>USER_DEF</NetworkType>
+		<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
+		<ConnectionsRangeCode>50</ConnectionsRangeCode>
+		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>
+		<MCode>10</MCode>
+	</EnvironmentProperties>
+	<DatasetsCreationProperties>
+		<AutoCreate>true</AutoCreate>
+		<OccurrenceAtTime>true</OccurrenceAtTime>
+		<OccurrenceDate>1429516800000</OccurrenceDate>
+		<OccurrenceTime Class="CodeUnitValue">
+			<Code><![CDATA[0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</OccurrenceTime>
+		<RecurrenceCode Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</RecurrenceCode>
+	</DatasetsCreationProperties>
+	<ScaleRuler>
+		<Id>1429438648802</Id>
+		<Name><![CDATA[scale]]></Name>
+		<X>0</X>
+		<Y>-150</Y>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<Length>100</Length>
+		<Rotation>0</Rotation>
+		<ScaleType>EXPLICITLY_DEFINED</ScaleType>
+		<ModelLength>10</ModelLength>
+		<LengthUnits>METER</LengthUnits>
+		<Scale>8</Scale>
+		<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+	</ScaleRuler>
+	<CurrentLevel>1564077346901</CurrentLevel>
+	<ConnectionsId>1375200311845</ConnectionsId>
+	<Variables/>
+	<StatechartElements>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341579258607</Id>
+			<Name><![CDATA[Moving]]></Name>
+			<X>60</X>
+			<Y>100</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(1);
+moveTo(getX(), destination.getY());
+</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341579267065</Id>
+			<Name><![CDATA[Loading]]></Name>
+			<X>60</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>//loading started
+enterState(2);
+if (currentMould.cake.state == AT_STORAGE_ENTER){
+	storage.hold4.setBlocked(false);
+	place = getFreePlace();
+	destination = place.position;
+}
+else{
+	storage.raising.stopDelay(currentMould);
+	destination = out;
+	place = getPlace(currentMould);
+	place.unload();
+}
+isEmpty = false;</EntryAction>
+				<ExitAction>if (currentMould.cake.state == AT_STORAGE_ENTER) 
+	main.hold1.setBlocked(false);</ExitAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341579269405</Id>
+			<Name><![CDATA[Unloading]]></Name>
+			<X>220</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(3);
+storage.moving.stopDelayForAll();</EntryAction>
+				<ExitAction>//unloading finished
+if (currentMould.cake.state == AT_STORAGE_ENTER)
+	place.load(currentMould);
+isEmpty = true;
+currentMould = null;</ExitAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Branch" ParentState="ROOT_NODE">
+			<Id>1345454731258</Id>
+			<Name><![CDATA[branch]]></Name>
+			<X>130</X>
+			<Y>190</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Properties/>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1347352447474</Id>
+			<Name><![CDATA[Waiting]]></Name>
+			<X>210</X>
+			<Y>70</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="150" Height="160">
+				<EntryAction>downtimeStart = time();</EntryAction>
+				<ExitAction>statisticsDowntime.add(time() - downtimeStart);</ExitAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="Waiting" ParentStateId="1347352447474">
+			<Id>1347352241459</Id>
+			<Name><![CDATA[Waiting4task]]></Name>
+			<X>220</X>
+			<Y>180</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(0);
+</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="Waiting" ParentStateId="1347352447474">
+			<Id>1341579252944</Id>
+			<Name><![CDATA[Waiting4nextService]]></Name>
+			<X>220</X>
+			<Y>100</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="130" Height="30">
+				<EntryAction>enterState(4);</EntryAction>
+				<ExitAction/>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+			<Id>1341582285525</Id>
+			<Name><![CDATA[statechart]]></Name>
+			<X>270</X>
+			<Y>40</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>30</Y>
+				</Point>
+			</Points>
+			<Properties Target="1347352447474"/>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341582342330</Id>
+			<Name><![CDATA[transition14]]></Name>
+			<X>142</X>
+			<Y>190</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>18</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>108</X>
+					<Y>90</Y>
+				</Point>
+			</Points>
+			<IconOffset>66.63961030678928</IconOffset>
+			<Properties Source="1345454731258" Target="1341579269405" Trigger="arrival">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>!isEmpty</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>false</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341582355534</Id>
+			<Name><![CDATA[transition16]]></Name>
+			<X>130</X>
+			<Y>200</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>80</Y>
+				</Point>
+			</Points>
+			<IconOffset>34.0</IconOffset>
+			<Properties Source="1345454731258" Target="1341579267065" Trigger="arrival">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>isEmpty</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<Guard>isEmpty == true</Guard>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>false</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341582362942</Id>
+			<Name><![CDATA[transition17]]></Name>
+			<X>90</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-150</Y>
+				</Point>
+			</Points>
+			<IconOffset>69.0</IconOffset>
+			<Properties Source="1341579267065" Target="1341579258607" Trigger="timeout">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[loadTime]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>String</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"Loading finished"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341582380285</Id>
+			<Name><![CDATA[transition19]]></Name>
+			<X>270</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-50</Y>
+				</Point>
+			</Points>
+			<IconOffset>19.0</IconOffset>
+			<Properties Source="1341579269405" Target="1347352447474" Trigger="timeout">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[loadTime]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>String</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"Unloading finished"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1342692931509</Id>
+			<Name><![CDATA[transition13]]></Name>
+			<X>210</X>
+			<Y>110</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>-50</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+			<IconOffset>19.0</IconOffset>
+			<Properties Source="1347352447474" Target="1341579258607" Trigger="condition">
+				<Action>Task temp = getTask();
+delayedTasks.remove(temp);
+if (((Mould)temp.agent).cake.state == AT_STORAGE_ENTER) 
+	taskWaitingTimeLoad.add(time() - temp.arrivalTime);
+else 
+	taskWaitingTimeUnload.add(time() - temp.arrivalTime);
+currentMould = (Mould)temp.agent;
+if (currentMould.cake.state == AT_STORAGE_ENTER) 
+	destination = in;
+else 
+	destination = getPlace(currentMould).position;
+moveTo(getX(), destination.getY());</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>getTask() != null;</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Cake</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>!(((msg.state == 0) &amp;&amp; (this.getY() == in.y)) || ((msg.state == 1) &amp;&amp; (this.getY() == cakeToPlace.get(currentCake).y)))</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1345454758917</Id>
+			<Name><![CDATA[transition18]]></Name>
+			<X>130</X>
+			<Y>130</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>50</Y>
+				</Point>
+			</Points>
+			<IconOffset>19.0</IconOffset>
+			<Properties Source="1341579258607" Target="1345454731258" Trigger="arrival">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition"
+                     ParentState="Waiting"
+                     ParentStateId="1347352447474">
+			<Id>1347352247070</Id>
+			<Name><![CDATA[transition20]]></Name>
+			<X>270</X>
+			<Y>180</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-50</Y>
+				</Point>
+			</Points>
+			<IconOffset>19.0</IconOffset>
+			<Properties Source="1347352241459" Target="1341579252944" Trigger="condition">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[delayedTasks.size()>0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>delayedTasks.size() &gt; 0</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>String</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>equalsTo</FilterType>
+				<EqualsExpression>"Unloading finished"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="InitialStatePointer"
+                     ParentState="Waiting"
+                     ParentStateId="1347352447474">
+			<Id>1347352486521</Id>
+			<Name><![CDATA[initialState]]></Name>
+			<X>340</X>
+			<Y>190</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>-20</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+			<Properties Target="1347352241459"/>
+		</StatechartElement>
+	</StatechartElements>
+	<Functions/>
+	<AnalysisData>
+		<Statistics>
+			<Id>1343804805190</Id>
+			<Name><![CDATA[statisticsDowntime]]></Name>
+			<X>-400</X>
+			<Y>310</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<Statistics>
+			<Id>1343915477280</Id>
+			<Name><![CDATA[taskWaitingTimeLoad]]></Name>
+			<X>-400</X>
+			<Y>340</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<Statistics>
+			<Id>1343915607250</Id>
+			<Name><![CDATA[taskWaitingTimeUnload]]></Name>
+			<X>-400</X>
+			<Y>370</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<DataSet>
+			<Id>1346682374099</Id>
+			<Name><![CDATA[states]]></Name>
+			<X>-400</X>
+			<Y>460</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<FreezeXAxis>true</FreezeXAxis>
+			<VerticalAxisExpression>state</VerticalAxisExpression>
+			<SamplesToKeep>900</SamplesToKeep>
+		</DataSet>
+	</AnalysisData>
+	<AgentLinks>
+		<AgentLink>
+			<Id>1375200311845</Id>
+			<Name><![CDATA[connections]]></Name>
+			<X>50</X>
+			<Y>-50</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<OnReceive>Task task = new Task(msg, time());
+delayedTasks.add(task);</OnReceive>
+			<HandleReceiveInConnections>false</HandleReceiveInConnections>
+			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+			<AgentLinkBidirectional>true</AgentLinkBidirectional>
+			<MessageType>Mould</MessageType>
+			<StatechartReference>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Traverse</ClassName>
+				<ItemName>statechart</ItemName>
+			</StatechartReference>
+			<LineStyle>SOLID</LineStyle>
+			<LineWidth>1</LineWidth>
+			<LineColor>-16777216</LineColor>
+			<LineZOrder>UNDER_AGENTS</LineZOrder>
+			<LineArrow>NONE</LineArrow>
+			<LineArrowPosition>END</LineArrowPosition>
+		</AgentLink>
+	</AgentLinks>
+	<ContainerLinks>
+		<ContainerLink>
+			<Id>1395142873055</Id>
+			<Name><![CDATA[main]]></Name>
+			<X>50</X>
+			<Y>-100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ActiveObjectClass>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Main</ClassName>
+			</ActiveObjectClass>
+		</ContainerLink>
+		<ContainerLink>
+			<Id>1395142873056</Id>
+			<Name><![CDATA[storage]]></Name>
+			<X>150</X>
+			<Y>-100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ActiveObjectClass>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Storage</ClassName>
+			</ActiveObjectClass>
+		</ContainerLink>
+	</ContainerLinks>
+	<Presentation/>
+</ActiveObjectClass>

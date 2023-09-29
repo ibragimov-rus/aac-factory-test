@@ -1,0 +1,1 @@
+return min(slurry/slurryStorageSize,1)*100;

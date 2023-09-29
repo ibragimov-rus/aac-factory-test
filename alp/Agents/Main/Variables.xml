@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Variables>
+	<Variable Class="Parameter">
+		<Id>1341572509502</Id>
+		<Name><![CDATA[autoclaveN]]></Name>
+		<X>-430</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[int]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[7]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341572509500</Id>
+				<Label><![CDATA[Autoclave qty]]></Label>
+				<EditorContolType>SLIDER</EditorContolType>
+				<MinSliderValue>1</MinSliderValue>
+				<MaxSliderValue>7</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569340846</Id>
+		<Name><![CDATA[autoclaveTraverseSpeed]]></Name>
+		<X>-430</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.0625]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569340844</Id>
+				<Label><![CDATA[Autoclave traverse speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569400976</Id>
+		<Name><![CDATA[autoclavingTime]]></Name>
+		<X>-430</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[12]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569400974</Id>
+				<Label><![CDATA[Autoclaving time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343381601490</Id>
+		<Name><![CDATA[bogeyN]]></Name>
+		<X>-430</X>
+		<Y>250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[int]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[7]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343381601488</Id>
+				<Label><![CDATA[Bogey set size]]></Label>
+				<EditorContolType>RADIO_BUTTONS</EditorContolType>
+				<PredefParamValue>
+					<Id>0</Id>
+					<Name><![CDATA[5]]></Name>
+					<Value Class="CodeValue">
+						<Code><![CDATA[5]]></Code>
+					</Value>
+				</PredefParamValue>
+				<PredefParamValue>
+					<Id>0</Id>
+					<Name><![CDATA[7]]></Name>
+					<Value Class="CodeValue">
+						<Code><![CDATA[7]]></Code>
+					</Value>
+				</PredefParamValue>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341567256402</Id>
+		<Name><![CDATA[castingTime]]></Name>
+		<X>-1040</X>
+		<Y>440</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[2]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341567256400</Id>
+				<Label><![CDATA[Casting time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343047764649</Id>
+		<Name><![CDATA[conveyorSpeed]]></Name>
+		<X>-1040</X>
+		<Y>470</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.2]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343047764647</Id>
+				<Label><![CDATA[Conveyor speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569263673</Id>
+		<Name><![CDATA[crossCuttingTime]]></Name>
+		<X>-430</X>
+		<Y>350</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569263671</Id>
+				<Label><![CDATA[Cross cutting time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343998679359</Id>
+		<Name><![CDATA[cuttingBogeyLoadTime]]></Name>
+		<X>-430</X>
+		<Y>410</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.5]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343998679357</Id>
+				<Label><![CDATA[Cutting bogey load time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343998607739</Id>
+		<Name><![CDATA[cuttingBogeySpeed]]></Name>
+		<X>-430</X>
+		<Y>380</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.2]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343998607737</Id>
+				<Label><![CDATA[Cutting bogey speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1345461212263</Id>
+		<Name><![CDATA[dateFormat]]></Name>
+		<X>-820</X>
+		<Y>460</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[java.text.SimpleDateFormat]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new java.text.SimpleDateFormat("HH:mm:ss");]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1343631748525</Id>
+		<Name><![CDATA[dayOutput]]></Name>
+		<X>-820</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1344246244552</Id>
+		<Name><![CDATA[downtimeCut1Start]]></Name>
+		<X>-820</X>
+		<Y>310</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1344263652547</Id>
+		<Name><![CDATA[greenSeparationEnabled]]></Name>
+		<X>-430</X>
+		<Y>440</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[boolean]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[true]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1344263652545</Id>
+				<Label><![CDATA[Green separation enabled]]></Label>
+				<EditorContolType>CHECK_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045534</Id>
+		<Name><![CDATA[gypsumArrivalQuantity]]></Name>
+		<X>-1040</X>
+		<Y>310</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[10000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045532</Id>
+				<Label><![CDATA[Gypsum arrival quantity]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045540</Id>
+		<Name><![CDATA[gypsumCriticalVolume]]></Name>
+		<X>-1040</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[2000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045538</Id>
+				<Label><![CDATA[Gypsum critical volume]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045546</Id>
+		<Name><![CDATA[gypsumDeliveryTime]]></Name>
+		<X>-1040</X>
+		<Y>250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[5]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045544</Id>
+				<Label><![CDATA[Gypsum delivery time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045528</Id>
+		<Name><![CDATA[gypsumStorageSize]]></Name>
+		<X>-1040</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[15000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045526</Id>
+				<Label><![CDATA[Gypsum storage size]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1345043576257</Id>
+		<Name><![CDATA[legendOn]]></Name>
+		<X>-200</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[boolean]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[false]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1396527982391</Id>
+		<Name><![CDATA[lightBlue]]></Name>
+		<X>-200</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="true"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Color]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[new Color(129, 195, 255)]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1343811096773</Id>
+		<Name><![CDATA[meter]]></Name>
+		<X>-200</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="true"
+              AccessType="public"
+              StaticVariable="true">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[8]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569457151</Id>
+		<Name><![CDATA[mouldBrushingTime]]></Name>
+		<X>-630</X>
+		<Y>290</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569457149</Id>
+				<Label><![CDATA[Mould brushing time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341567158251</Id>
+		<Name><![CDATA[mouldQuantity]]></Name>
+		<X>-630</X>
+		<Y>260</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[int]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[50]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341567158249</Id>
+				<Label><![CDATA[Mould qty]]></Label>
+				<EditorContolType>SLIDER</EditorContolType>
+				<MinSliderValue>10</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343645459025</Id>
+		<Name><![CDATA[multifunctionalCraneLoadTime]]></Name>
+		<X>-430</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343645459023</Id>
+				<Label><![CDATA[Multifunctional crane load time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569303266</Id>
+		<Name><![CDATA[multifunctionalCraneSpeed]]></Name>
+		<X>-430</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.17]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569303264</Id>
+				<Label><![CDATA[Multifunctional crane speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341567284170</Id>
+		<Name><![CDATA[precureTime]]></Name>
+		<X>-630</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[2.5]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341567284168</Id>
+				<Label><![CDATA[Precure time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="CollectionVariable">
+		<Id>1345466283675</Id>
+		<Name><![CDATA[processingLog]]></Name>
+		<X>-820</X>
+		<Y>430</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+			<CollectionClass>ArrayList</CollectionClass>
+			<ElementClass>String</ElementClass>
+			<ValueElementClass>String</ValueElementClass>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045531</Id>
+		<Name><![CDATA[sandArrivalQuantity]]></Name>
+		<X>-1040</X>
+		<Y>280</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[40000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045529</Id>
+				<Label><![CDATA[Sand arrival quantity]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045537</Id>
+		<Name><![CDATA[sandCriticalVolume]]></Name>
+		<X>-1040</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[20000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045535</Id>
+				<Label><![CDATA[Sand critical volume]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045543</Id>
+		<Name><![CDATA[sandDeliveryTime]]></Name>
+		<X>-1040</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[3]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045541</Id>
+				<Label><![CDATA[Sand delivery time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832045525</Id>
+		<Name><![CDATA[sandStorageSize]]></Name>
+		<X>-1040</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[50000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832045514</Id>
+				<Label><![CDATA[Sand storage size]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1429444867265</Id>
+		<Name><![CDATA[selectedAutoclave]]></Name>
+		<X>-1230</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Autoclave]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1429444867261</Id>
+		<Name><![CDATA[selectedAutoclaveNumber]]></Name>
+		<X>-1230</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1504527984476</Id>
+		<Name><![CDATA[selectedViewArea]]></Name>
+		<X>-200</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[ViewArea]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[viewAreaAnimation]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569279804</Id>
+		<Name><![CDATA[separationTime]]></Name>
+		<X>-430</X>
+		<Y>470</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569279802</Id>
+				<Label><![CDATA[Separation time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809997443</Id>
+		<Name><![CDATA[slurryForCake]]></Name>
+		<X>-1040</X>
+		<Y>410</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[1320]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809997441</Id>
+				<Label><![CDATA[Slurry for cake]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343832117429</Id>
+		<Name><![CDATA[slurryStorageSize]]></Name>
+		<X>-1040</X>
+		<Y>340</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[200000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343832117413</Id>
+				<Label><![CDATA[Slurry storage size]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343646743634</Id>
+		<Name><![CDATA[standartCraneLoadTime]]></Name>
+		<X>-630</X>
+		<Y>390</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.5]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343646743632</Id>
+				<Label><![CDATA[Standart crane load time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343646743637</Id>
+		<Name><![CDATA[standartCraneSpeed]]></Name>
+		<X>-630</X>
+		<Y>360</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.2]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343646743635</Id>
+				<Label><![CDATA[Standart crane speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="CollectionVariable">
+		<Id>1396532911466</Id>
+		<Name><![CDATA[stateToText]]></Name>
+		<X>-820</X>
+		<Y>250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" AccessType="public" StaticVariable="false">
+			<CollectionClass>LinkedHashMap</CollectionClass>
+			<ElementClass>StateType</ElementClass>
+			<ValueElementClass>String</ValueElementClass>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341487685813</Id>
+		<Name><![CDATA[storageSize]]></Name>
+		<X>-630</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[int]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[40]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341487685811</Id>
+				<Label><![CDATA[Storage size]]></Label>
+				<EditorContolType>SLIDER</EditorContolType>
+				<MinSliderValue>1</MinSliderValue>
+				<MaxSliderValue>40</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1343723777037</Id>
+		<Name><![CDATA[textProcessing]]></Name>
+		<X>-820</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[String]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[""]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1347360235577</Id>
+		<Name><![CDATA[toUnloadCraneCount]]></Name>
+		<X>2615</X>
+		<Y>-215</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343645090725</Id>
+		<Name><![CDATA[traverseLoadTime]]></Name>
+		<X>-630</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343645090723</Id>
+				<Label><![CDATA[Traverse load time]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1341569548646</Id>
+		<Name><![CDATA[traverseSpeed]]></Name>
+		<X>-630</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.045]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1341569548644</Id>
+				<Label><![CDATA[Traverse speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343646758719</Id>
+		<Name><![CDATA[trolleyN]]></Name>
+		<X>-630</X>
+		<Y>420</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[int]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[6]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343646758717</Id>
+				<Label><![CDATA[Trolley N]]></Label>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343646751216</Id>
+		<Name><![CDATA[trolleySpeed]]></Name>
+		<X>-630</X>
+		<Y>450</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.2]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343646751214</Id>
+				<Label><![CDATA[Trolley speed]]></Label>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1396529730903</Id>
+		<Name><![CDATA[view]]></Name>
+		<X>-100</X>
+		<Y>3180</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1343738387406</Id>
+		<Name><![CDATA[warmingTime]]></Name>
+		<X>-200</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="true"
+              AccessType="public"
+              StaticVariable="true">
+			<Type><![CDATA[double]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0.5]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+</Variables>

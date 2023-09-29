@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Variables>
+	<Variable Class="Parameter">
+		<Id>1395151346327</Id>
+		<Name><![CDATA[cake]]></Name>
+		<X>100</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[Cake]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[null]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>0</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1395923175675</Id>
+		<Name><![CDATA[storagePlace]]></Name>
+		<X>100</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[StoragePlace]]></Type>
+		</Properties>
+	</Variable>
+</Variables>

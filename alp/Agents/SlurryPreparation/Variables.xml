@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Variables>
+	<Variable Class="Flow">
+		<Id>1343809917408</Id>
+		<Name><![CDATA[flow]]></Name>
+		<X>100</X>
+		<Y>470</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<Properties SourceId="1343809917481"
+              TargetId="1343809917473"
+              External="false"
+              Constant="false"
+              Array="false">
+			<Formula>(truckSand &gt; 0 &amp;&amp; sand&lt;sandStorageSize ? 600/minute() : 0)</Formula>
+			<Color/>
+			<ValveIndex>1</ValveIndex>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>50</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>100</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+		</Properties>
+	</Variable>
+	<Variable Class="Flow">
+		<Id>1343809917402</Id>
+		<Name><![CDATA[flow1]]></Name>
+		<X>200</X>
+		<Y>470</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<Properties SourceId="1343809917473"
+              TargetId="1343809917477"
+              External="false"
+              Constant="false"
+              Array="false">
+			<Formula>(sand &gt; 1 &amp;&amp; slurry &lt; slurryStorageSize ? 640/moveTime : 0)</Formula>
+			<Color/>
+			<ValveIndex>1</ValveIndex>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>130</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>290</X>
+					<Y>20</Y>
+				</Point>
+			</Points>
+		</Properties>
+	</Variable>
+	<Variable Class="Flow">
+		<Id>1343809917404</Id>
+		<Name><![CDATA[flow2]]></Name>
+		<X>200</X>
+		<Y>520</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<Properties SourceId="1343809917475"
+              TargetId="1343809917477"
+              External="false"
+              Constant="false"
+              Array="false">
+			<Formula>(gypsum &gt; 1 &amp;&amp; slurry &lt; slurryStorageSize ? 36/moveTime : 0)</Formula>
+			<Color/>
+			<ValveIndex>1</ValveIndex>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>130</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>290</X>
+					<Y>-30</Y>
+				</Point>
+			</Points>
+		</Properties>
+	</Variable>
+	<Variable Class="Flow">
+		<Id>1343809917406</Id>
+		<Name><![CDATA[flow3]]></Name>
+		<X>490</X>
+		<Y>490</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<Properties SourceId="1343809917477"
+              TargetId="1343809917479"
+              External="false"
+              Constant="false"
+              Array="false">
+			<Formula>(mill &gt; 1 ? 400/minute() : 0)</Formula>
+			<Color/>
+			<ValveIndex>1</ValveIndex>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>100</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>200</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+		</Properties>
+	</Variable>
+	<Variable Class="Flow">
+		<Id>1343809917410</Id>
+		<Name><![CDATA[flow4]]></Name>
+		<X>100</X>
+		<Y>520</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<Properties SourceId="1343809917483"
+              TargetId="1343809917475"
+              External="false"
+              Constant="false"
+              Array="false">
+			<Formula>(truckGypsum &gt; 0 &amp;&amp; gypsum &lt; gypsumStorageSize? 100/minute() : 0)</Formula>
+			<Color/>
+			<ValveIndex>1</ValveIndex>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>50</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>100</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917475</Id>
+		<Name><![CDATA[gypsum]]></Name>
+		<Unit>kg</Unit>
+		<X>200</X>
+		<Y>520</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>gypsumStorageSize</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917459</Id>
+		<Name><![CDATA[gypsumArrivalQuantity]]></Name>
+		<Unit>kg</Unit>
+		<X>-200</X>
+		<Y>190</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[90*180]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917457</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917465</Id>
+		<Name><![CDATA[gypsumCriticalVolume]]></Name>
+		<Unit>kg</Unit>
+		<X>-200</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[90*180/5]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917463</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1344329229073</Id>
+		<Name><![CDATA[gypsumDeliveriesCount]]></Name>
+		<X>-200</X>
+		<Y>380</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343831867962</Id>
+		<Name><![CDATA[gypsumDeliveryTime]]></Name>
+		<Unit>minutes</Unit>
+		<X>-200</X>
+		<Y>250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[5]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343831867960</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917453</Id>
+		<Name><![CDATA[gypsumStorageSize]]></Name>
+		<X>170</X>
+		<Y>590</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[90*180]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917451</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917477</Id>
+		<Name><![CDATA[mill]]></Name>
+		<Unit>kg</Unit>
+		<X>490</X>
+		<Y>490</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>0</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917447</Id>
+		<Name><![CDATA[moveTime]]></Name>
+		<X>50</X>
+		<Y>550</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[2]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917445</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1395737300155</Id>
+		<Name><![CDATA[nextId]]></Name>
+		<X>-200</X>
+		<Y>410</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[1]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917473</Id>
+		<Name><![CDATA[sand]]></Name>
+		<Unit>kg</Unit>
+		<X>200</X>
+		<Y>470</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>sandStorageSize</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917456</Id>
+		<Name><![CDATA[sandArrivalQuantity]]></Name>
+		<Unit>kg</Unit>
+		<X>-200</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[1200*180]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917454</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917462</Id>
+		<Name><![CDATA[sandCriticalVolume]]></Name>
+		<Unit>kg</Unit>
+		<X>-200</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[1200*180/3]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917460</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1344329226967</Id>
+		<Name><![CDATA[sandDeliveriesCount]]></Name>
+		<X>-200</X>
+		<Y>350</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343831856917</Id>
+		<Name><![CDATA[sandDeliveryTime]]></Name>
+		<Unit>minutes</Unit>
+		<X>-200</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">HOUR</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[5]]></Code>
+				<Unit Class="TimeUnits">HOUR</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343831856915</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917450</Id>
+		<Name><![CDATA[sandStorageSize]]></Name>
+		<X>170</X>
+		<Y>390</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[1200*180]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917448</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917479</Id>
+		<Name><![CDATA[slurry]]></Name>
+		<Unit>kg</Unit>
+		<X>690</X>
+		<Y>490</Y>
+		<Label>
+			<X>0</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>10000</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1345460103539</Id>
+		<Name><![CDATA[slurryForCake]]></Name>
+		<X>-200</X>
+		<Y>280</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[1320]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1345460103537</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1343809917471</Id>
+		<Name><![CDATA[slurryStorageSize]]></Name>
+		<X>440</X>
+		<Y>390</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type><![CDATA[double]]></Type>
+			<UnitType>NONE</UnitType>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeValue">
+				<Code><![CDATA[200000]]></Code>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1343809917469</Id>
+				<EditorContolType>TEXT_BOX</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917483</Id>
+		<Name><![CDATA[truckGypsum]]></Name>
+		<X>100</X>
+		<Y>520</Y>
+		<Label>
+			<X>-55</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>0</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+	<Variable Class="StockVariable">
+		<Id>1343809917481</Id>
+		<Name><![CDATA[truckSand]]></Name>
+		<X>100</X>
+		<Y>470</Y>
+		<Label>
+			<X>-45</X>
+			<Y>-25</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties Array="false">
+			<EquationStyle>classic</EquationStyle>
+			<Width>20</Width>
+			<Height>20</Height>
+			<InitialValue>0</InitialValue>
+			<Color/>
+		</Properties>
+	</Variable>
+</Variables>

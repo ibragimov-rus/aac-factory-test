@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Variables>
+	<Variable Class="Parameter">
+		<Id>1345708704742</Id>
+		<Name><![CDATA[conveyorSpeed]]></Name>
+		<X>-200</X>
+		<Y>160</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code/>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1345708704740</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1345643234079</Id>
+		<Name><![CDATA[currentMould]]></Name>
+		<X>640</X>
+		<Y>310</Y>
+		<Label>
+			<X>-40</X>
+			<Y>-20</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Mould]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[null]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1345644476039</Id>
+		<Name><![CDATA[destination]]></Name>
+		<X>-200</X>
+		<Y>220</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[Node]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1347351154192</Id>
+		<Name><![CDATA[downtimeStart]]></Name>
+		<X>-200</X>
+		<Y>370</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[double]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1345644279089</Id>
+		<Name><![CDATA[loadTime]]></Name>
+		<X>-200</X>
+		<Y>100</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>TIME</UnitType>
+			<UnitOfValue Class="TimeUnits">MINUTE</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1345644279087</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1396515862954</Id>
+		<Name><![CDATA[mouldState]]></Name>
+		<X>-370</X>
+		<Y>336</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[0]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1347436467674</Id>
+		<Name><![CDATA[platformCount]]></Name>
+		<X>-200</X>
+		<Y>250</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="Parameter">
+		<Id>1345645202911</Id>
+		<Name><![CDATA[speed]]></Name>
+		<X>-200</X>
+		<Y>130</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+			<Type/>
+			<UnitType>VELOCITY</UnitType>
+			<UnitOfValue Class="SpeedUnits">MPS</UnitOfValue>
+			<SdArray>false</SdArray>
+			<DefaultValue Class="CodeUnitValue">
+				<Code><![CDATA[0.2]]></Code>
+				<Unit Class="SpeedUnits">MPS</Unit>
+			</DefaultValue>
+			<ParameterEditor>
+				<Id>1345645202909</Id>
+				<EditorContolType>UNIT_EDITOR</EditorContolType>
+				<MinSliderValue>0</MinSliderValue>
+				<MaxSliderValue>100</MaxSliderValue>
+				<DelimeterType>NO_DELIMETER</DelimeterType>
+			</ParameterEditor>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1347271824239</Id>
+		<Name><![CDATA[state]]></Name>
+		<X>-200</X>
+		<Y>399</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[int]]></Type>
+		</Properties>
+	</Variable>
+	<Variable Class="PlainVariable">
+		<Id>1396431289519</Id>
+		<Name><![CDATA[tilt]]></Name>
+		<X>-370</X>
+		<Y>305</Y>
+		<Label>
+			<X>10</X>
+			<Y>0</Y>
+		</Label>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>true</PresentationFlag>
+		<ShowLabel>true</ShowLabel>
+		<Properties SaveInSnapshot="true"
+              Constant="false"
+              AccessType="public"
+              StaticVariable="false">
+			<Type><![CDATA[boolean]]></Type>
+			<InitialValue Class="CodeValue">
+				<Code><![CDATA[false]]></Code>
+			</InitialValue>
+		</Properties>
+	</Variable>
+</Variables>

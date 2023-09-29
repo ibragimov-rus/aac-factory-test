@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActiveObjectClass>
+	<Id>1341487000135</Id>
+	<Name><![CDATA[Main]]></Name>
+	<Description><![CDATA[This model of Autoclaved Aerated Concrete (AAC) factory shows the process of concrete 
+production step by step - from raw materials (sand and gypsum) to pallets of concrete blocks.
+
+Major stages of concrete production process:
+ - Mix preparation
+ - Mould pouring
+ - Rising
+ - Cutting
+ - Separation
+ - Autoclaving
+ - Unloading
+
+Productive capacity of the factory depends on plants properties. The idea of this model is to get full information about process timing to find the best way to increase factory perfomance.]]></Description>
+	<Import><![CDATA[import org.eclipse.jetty.server.LocalConnector.LocalEndPoint;]]></Import>
+	<StartupCode><![CDATA[//additional setup for processes
+slurryPreparation.newCake.reset();
+
+//additional setup for charts
+chart10.addDataSet(autoclaving.multifunctionalCrane.states,"Multifunctional crane");
+chart12.addDataSet(risingArea.traverse.states,"Rising area traverse");
+chart13.addDataSet(autoclaving.autoclaveTraverse.states,"Autoclave traverse");
+chart14.addDataSet(unloading.unloadingCrane.states,"Unloading crane");
+chart15.addDataSet(cuttingLine1.states,"#1");
+chart16.addDataSet(cuttingLine2.states,"#2");
+for (int i = 0; i < autoclaveN - 1; i++)
+	chart17.get(i).addDataSet(autoclaving.autoclave.get(i).states,"#" + (i + 1));
+chart18.addDataSet(autoclaving.autoclave.get(autoclaveN - 1).states,"#" + (autoclaveN));
+chart19.addDataSet(tiltCrane.states);
+chart32.addDataSet(liftingCrane.states);
+chart35.addDataSet(backTiltTable.states);
+refreshTimePlotCharts.reset();
+
+//animation
+String[] items = new String[autoclaveN];
+for (int i = 0; i < autoclaveN; i++){
+	items[i] = String.valueOf(
+			autoclaving.autoclave.get(i).number
+	);
+}
+
+comboboxAutoclave.setItems(items);
+comboboxAutoclave.setValueIndex(0, true);
+stateToText.put(POURED, "mass poured into mould");
+stateToText.put(AT_STORAGE_ENTER, "cake moved to enter to the rising area");
+stateToText.put(IN_STORAGE, "cake placed to the storage cell at the rising area");
+stateToText.put(RISING_FINISHED, "cake rising finished");
+stateToText.put(MOVED_FROM_STORAGE, "cake moved from rising area to tilt table");
+stateToText.put(TILTED, "cake tilted");
+stateToText.put(CUTTING_STARTED, "cake cutting started");
+stateToText.put(CUTTING_FINISHED, "cake cutting finished");
+stateToText.put(TILTED_BACK, "cake tilted back");
+stateToText.put(SEPARATED, "cake separated");
+stateToText.put(PLACED_TO_BOGEY, "cake placed to the bogey in autoclaving area");
+stateToText.put(AUTOCLAVING_STARTED, "cake autoclaving started");
+stateToText.put(AUTOCLAVING_FINISHED, "cake autoclaving finished");
+stateToText.put(MOVED_TO_UNLOAD, "cake moved to unload");
+stateToText.put(UNLOADED, "cake unloaded");
+
+refreshTimePlotCharts.reset();
+groupTitleBar.setPos( viewAreaAnimation.getX(), viewAreaAnimation.getY() );]]></StartupCode>
+	<Generic>false</Generic>
+	<GenericParameter>
+		<Id>1429438648216</Id>
+		<Name><![CDATA[1429438648216]]></Name>
+		<GenericParameterValue Class="CodeValue">
+			<Code><![CDATA[T]]></Code>
+		</GenericParameterValue>
+		<GenericParameterLabel>Generic parameters:</GenericParameterLabel>
+	</GenericParameter>
+	<FlowChartsUsage>ENTITY</FlowChartsUsage>
+	<SamplesToKeep>100</SamplesToKeep>
+	<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+	<ElementsLimitValue>100</ElementsLimitValue>
+	<MakeDefaultViewArea>true</MakeDefaultViewArea>
+	<SceneGridColor/>
+	<SceneBackgroundColor/>
+	<SceneSkybox>null</SceneSkybox>
+	<AgentProperties>
+		<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+		<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+		<RotateAnimationVertically>false</RotateAnimationVertically>
+		<VelocityCode Class="CodeUnitValue">
+			<Code><![CDATA[10]]></Code>
+			<Unit Class="SpeedUnits">MPS</Unit>
+		</VelocityCode>
+		<PhysicalLength Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalLength>
+		<PhysicalWidth Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalWidth>
+		<PhysicalHeight Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalHeight>
+	</AgentProperties>
+	<EnvironmentProperties>
+		<EnableSteps>false</EnableSteps>
+		<StepDurationCode Class="CodeUnitValue">
+			<Code><![CDATA[1.0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</StepDurationCode>
+		<SpaceType>CONTINUOUS</SpaceType>
+		<WidthCode>500</WidthCode>
+		<HeightCode>500</HeightCode>
+		<ZHeightCode>0</ZHeightCode>
+		<ColumnsCountCode>100</ColumnsCountCode>
+		<RowsCountCode>100</RowsCountCode>
+		<NeigborhoodType>MOORE</NeigborhoodType>
+		<LayoutType>USER_DEF</LayoutType>
+		<LayoutTypeApplyOnStartup>false</LayoutTypeApplyOnStartup>
+		<NetworkType>USER_DEF</NetworkType>
+		<NetworkTypeApplyOnStartup>false</NetworkTypeApplyOnStartup>
+		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
+		<ConnectionsRangeCode>50</ConnectionsRangeCode>
+		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>
+		<MCode>10</MCode>
+	</EnvironmentProperties>
+	<DatasetsCreationProperties>
+		<AutoCreate>true</AutoCreate>
+		<OccurrenceAtTime>true</OccurrenceAtTime>
+		<OccurrenceDate>1429516800000</OccurrenceDate>
+		<OccurrenceTime Class="CodeUnitValue">
+			<Code><![CDATA[0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</OccurrenceTime>
+		<RecurrenceCode Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</RecurrenceCode>
+	</DatasetsCreationProperties>
+	<ScaleRuler>
+		<Id>1429438648755</Id>
+		<Name><![CDATA[scale]]></Name>
+		<X>0</X>
+		<Y>-150</Y>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<Length>100</Length>
+		<Rotation>0</Rotation>
+		<ScaleType>EXPLICITLY_DEFINED</ScaleType>
+		<ModelLength>10</ModelLength>
+		<LengthUnits>METER</LengthUnits>
+		<Scale>8</Scale>
+		<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+	</ScaleRuler>
+	<CurrentLevel>1564077346889</CurrentLevel>
+	<ConnectionsId>1375200311842</ConnectionsId>
+	<Variables/>
+	<Events>
+		<Event>
+			<Id>1343631843726</Id>
+			<Name><![CDATA[getDayOutput]]></Name>
+			<X>-820</X>
+			<Y>130</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="cyclic">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343631843663</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>//collect output for the last day
+dataDayOutput.add(dayOutput*5.4/3);
+datasetOutput.add(dayOutput);
+dayOutput = 0;</Action>
+		</Event>
+		<Event>
+			<Id>1343656007816</Id>
+			<Name><![CDATA[warmingFinished]]></Name>
+			<X>-820</X>
+			<Y>160</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="occuresOnce">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343631843663</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[warmingTime]]></Code>
+					<Unit Class="TimeUnits">DAY</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[2*day()]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>//reset all statistics after warming-up
+for (Autoclave a : autoclaving.autoclave){
+	a.statistcsDowntime.reset();
+	if (a.inState(Autoclave.Empty)) a.downtimeStart = time();
+}
+datasetWarmEnd.add(0);
+datasetWarmEnd.add(datasetOutput.getYMax());
+dayOutput = 0;
+risingArea.statisticsUtilization.reset();
+movingOut.trolleys.resetStats();
+risingArea.traverse.statisticsDowntime.reset();
+autoclaving.multifunctionalCrane.statisticsDowntime.reset();
+autoclaving.multifunctionalCrane.downtimeStart = time();
+liftingCrane.statisticsDowntime.reset();
+liftingCrane.downtimeStart = time();
+tiltCrane.statisticsDowntime.reset();
+tiltCrane.downtimeStart = time();
+unloading.unloadingCrane.statisticsDowntime.reset();
+unloading.unloadingCrane.downtimeStart = time();
+autoclaving.autoclaveTraverse.statisticsDowntime.reset();
+autoclaving.autoclaveTraverse.downtimeStart = time();
+cuttingLine1.statistcsDowntime.reset();
+cuttingLine1.downtimeStart = time();
+cuttingLine2.statistcsDowntime.reset();
+cuttingLine2.downtimeStart = time();
+backTiltTable.statisticsDowntime.reset();
+backTiltTable.downtimeStart = time();
+dataDayOutput.reset();
+datasetCakesInProcess.reset();
+</Action>
+		</Event>
+		<Event>
+			<Id>1347351001463</Id>
+			<Name><![CDATA[refreshTimePlotCharts]]></Name>
+			<X>-820</X>
+			<Y>520</Y>
+			<Label>
+				<X>10</X>
+				<Y>-5</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="cyclic">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1346682118000</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[0.1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>autoclaving.multifunctionalCrane.states.update();
+risingArea.traverse.states.update();
+autoclaving.autoclaveTraverse.states.update();
+unloading.unloadingCrane.states.update();
+cuttingLine1.states.update();
+cuttingLine2.states.update();
+tiltCrane.states.update();
+liftingCrane.states.update();
+backTiltTable.states.update();
+for (int i=0;i&lt;autoclaveN;i++)
+	autoclaving.autoclave.get(i).states.update()</Action>
+		</Event>
+		<Event>
+			<Id>1348153467905</Id>
+			<Name><![CDATA[halfSeparation]]></Name>
+			<X>-200</X>
+			<Y>340</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="userControls">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[separationTime/2]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1348153467826</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>if (greenSeparationEnabled) 
+	greenSeparation.delayGet(0).setShape(greenSeparation.delayGet(0).groupCake2);
+else 
+	unloading.whiteSeparation.delayGet(0).setShape(unloading.whiteSeparation.delayGet(0).groupWhiteCake2);</Action>
+		</Event>
+	</Events>
+	<Functions/>
+	<AnalysisData>
+		<HistogramData>
+			<Id>1343731899723</Id>
+			<Name><![CDATA[dataDayOutput]]></Name>
+			<X>-820</X>
+			<Y>100</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Value/>
+			<NumberOfIntervals>20</NumberOfIntervals>
+			<MinMaxAutodetect>true</MinMaxAutodetect>
+			<RangeMinExpression>0</RangeMinExpression>
+			<RangeMaxExpression>1</RangeMaxExpression>
+			<InitialIntervalSize>0.1</InitialIntervalSize>
+			<CalculateCDF>false</CalculateCDF>
+			<CalculatePercentiles>false</CalculatePercentiles>
+			<LowPercent>10</LowPercent>
+			<HighPercent>10</HighPercent>
+			<Title/>
+		</HistogramData>
+		<Statistics>
+			<Id>1344246199436</Id>
+			<Name><![CDATA[statisticsDowntimeCut1]]></Name>
+			<X>-820</X>
+			<Y>280</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<DataSet>
+			<Id>1344600846410</Id>
+			<Name><![CDATA[datasetOutput]]></Name>
+			<X>-820</X>
+			<Y>340</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<FreezeXAxis>true</FreezeXAxis>
+			<SamplesToKeep>31</SamplesToKeep>
+		</DataSet>
+		<DataSet>
+			<Id>1344601036365</Id>
+			<Name><![CDATA[datasetWarmEnd]]></Name>
+			<X>-820</X>
+			<Y>370</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<FreezeXAxis>true</FreezeXAxis>
+			<SamplesToKeep>2</SamplesToKeep>
+		</DataSet>
+		<DataSet>
+			<Id>1346235085106</Id>
+			<Name><![CDATA[datasetCakesInProcess]]></Name>
+			<X>-820</X>
+			<Y>490</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[5]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<FreezeXAxis>true</FreezeXAxis>
+			<VerticalAxisExpression>slurryPreparation.sourceCake.count() - movingOut.sink.count()/3</VerticalAxisExpression>
+			<SamplesToKeep>576</SamplesToKeep>
+		</DataSet>
+	</AnalysisData>
+	<AgentLinks>
+		<AgentLink>
+			<Id>1375200311842</Id>
+			<Name><![CDATA[connections]]></Name>
+			<X>50</X>
+			<Y>-50</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<HandleReceiveInConnections>false</HandleReceiveInConnections>
+			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+			<AgentLinkBidirectional>true</AgentLinkBidirectional>
+			<MessageType>Object</MessageType>
+			<LineStyle>SOLID</LineStyle>
+			<LineWidth>1</LineWidth>
+			<LineColor>-16777216</LineColor>
+			<LineZOrder>UNDER_AGENTS</LineZOrder>
+			<LineArrow>NONE</LineArrow>
+			<LineArrowPosition>END</LineArrowPosition>
+		</AgentLink>
+	</AgentLinks>
+	<EmbeddedObjects/>
+	<Presentation/>
+	<Areas>
+		<Area>
+			<Id>1343826483801</Id>
+			<Name><![CDATA[viewAreaStatistics]]></Name>
+			<X>0</X>
+			<Y>800</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title>Statistics</Title>
+			<Width>1200</Width>
+			<Height>800</Height>
+		</Area>
+		<Area>
+			<Id>1343830621323</Id>
+			<Name><![CDATA[viewAreaAnimation]]></Name>
+			<X>0</X>
+			<Y>0</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title>Animation</Title>
+			<Width>1200</Width>
+			<Height>800</Height>
+		</Area>
+		<Area>
+			<Id>1343907282857</Id>
+			<Name><![CDATA[viewAreaStateCharts]]></Name>
+			<X>0</X>
+			<Y>1600</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title>Plants state charts</Title>
+			<Width>1200</Width>
+			<Height>800</Height>
+		</Area>
+		<Area>
+			<Id>1347870528871</Id>
+			<Name><![CDATA[viewArea3D]]></Name>
+			<X>0</X>
+			<Y>2400</Y>
+			<Label>
+				<X>0</X>
+				<Y>-10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Title/>
+			<Width>1200</Width>
+			<Height>800</Height>
+		</Area>
+	</Areas>
+</ActiveObjectClass>

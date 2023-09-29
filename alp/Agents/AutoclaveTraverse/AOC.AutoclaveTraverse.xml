@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActiveObjectClass>
+	<Id>1341911822308</Id>
+	<Name><![CDATA[AutoclaveTraverse]]></Name>
+	<StartupCode><![CDATA[states.add(0);]]></StartupCode>
+	<Generic>false</Generic>
+	<GenericParameter>
+		<Id>1429438648820</Id>
+		<Name><![CDATA[1429438648820]]></Name>
+		<GenericParameterValue Class="CodeValue">
+			<Code><![CDATA[T]]></Code>
+		</GenericParameterValue>
+		<GenericParameterLabel>Generic parameters:</GenericParameterLabel>
+	</GenericParameter>
+	<FlowChartsUsage>ENTITY</FlowChartsUsage>
+	<SamplesToKeep>100</SamplesToKeep>
+	<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+	<ElementsLimitValue>100</ElementsLimitValue>
+	<MakeDefaultViewArea>true</MakeDefaultViewArea>
+	<SceneGridColor/>
+	<SceneBackgroundColor/>
+	<SceneSkybox>null</SceneSkybox>
+	<AgentProperties>
+		<EnvironmentDefinesInitialLocation>false</EnvironmentDefinesInitialLocation>
+		<RotateAnimationTowardsMovement>false</RotateAnimationTowardsMovement>
+		<RotateAnimationVertically>false</RotateAnimationVertically>
+		<VelocityCode Class="CodeUnitValue">
+			<Code><![CDATA[speed]]></Code>
+			<Unit Class="SpeedUnits">MPS</Unit>
+		</VelocityCode>
+		<PhysicalLength Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalLength>
+		<PhysicalWidth Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalWidth>
+		<PhysicalHeight Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalHeight>
+	</AgentProperties>
+	<EnvironmentProperties>
+		<EnableSteps>false</EnableSteps>
+		<StepDurationCode Class="CodeUnitValue">
+			<Code><![CDATA[1.0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</StepDurationCode>
+		<SpaceType>CONTINUOUS</SpaceType>
+		<WidthCode>500</WidthCode>
+		<HeightCode>500</HeightCode>
+		<ZHeightCode>0</ZHeightCode>
+		<ColumnsCountCode>100</ColumnsCountCode>
+		<RowsCountCode>100</RowsCountCode>
+		<NeigborhoodType>MOORE</NeigborhoodType>
+		<LayoutType>USER_DEF</LayoutType>
+		<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+		<NetworkType>USER_DEF</NetworkType>
+		<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
+		<ConnectionsRangeCode>50</ConnectionsRangeCode>
+		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>
+		<MCode>10</MCode>
+	</EnvironmentProperties>
+	<DatasetsCreationProperties>
+		<AutoCreate>true</AutoCreate>
+		<OccurrenceAtTime>true</OccurrenceAtTime>
+		<OccurrenceDate>1429516800000</OccurrenceDate>
+		<OccurrenceTime Class="CodeUnitValue">
+			<Code><![CDATA[0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</OccurrenceTime>
+		<RecurrenceCode Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</RecurrenceCode>
+	</DatasetsCreationProperties>
+	<ScaleRuler>
+		<Id>1429438648821</Id>
+		<Name><![CDATA[scale]]></Name>
+		<X>0</X>
+		<Y>-150</Y>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<Length>100</Length>
+		<Rotation>0</Rotation>
+		<ScaleType>EXPLICITLY_DEFINED</ScaleType>
+		<ModelLength>10</ModelLength>
+		<LengthUnits>METER</LengthUnits>
+		<Scale>8</Scale>
+		<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+	</ScaleRuler>
+	<CurrentLevel>1564077346882</CurrentLevel>
+	<ConnectionsId>1375200311851</ConnectionsId>
+	<Variables/>
+	<StatechartElements>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341911822332</Id>
+			<Name><![CDATA[Waiting]]></Name>
+			<X>200</X>
+			<Y>90</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(0);
+downtimeStart = time();</EntryAction>
+				<ExitAction>statisticsDowntime.add(time() - downtimeStart);</ExitAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341911822334</Id>
+			<Name><![CDATA[Moving]]></Name>
+			<X>200</X>
+			<Y>180</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(1);
+moveTo(getX(), destination.y);</EntryAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="State" ParentState="ROOT_NODE">
+			<Id>1341911822336</Id>
+			<Name><![CDATA[Working]]></Name>
+			<X>50</X>
+			<Y>180</Y>
+			<Label>
+				<X>10</X>
+				<Y>10</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties Width="100" Height="30">
+				<EntryAction>enterState(2);
+
+//prepare autoclave for loading/unloading
+autoclaving.autoclave.get(destination.n - 1).statechart.receiveMessage("loading started");
+if (destination.state) {
+	taskWaitingTimeUnload.add(time() - time);
+}
+else {
+	taskWaitingTimeLoad.add(time() - time);
+}</EntryAction>
+				<ExitAction>//finish autoclave loading/unloading
+autoclaving.autoclave.get(destination.n - 1).statechart.receiveMessage("loading finished");
+
+//assign new tasks to the multifunctional crane
+if (destination.state) 
+	for (Bogey b : destination.bogeys)
+		for (Cake c : b.cakes)
+			autoclaving.multifunctionalCrane.receive(c);
+
+//change track buffer state
+destination.state = !destination.state;</ExitAction>
+				<FillColor/>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="EntryPoint" ParentState="ROOT_NODE">
+			<Id>1341911822340</Id>
+			<Name><![CDATA[statechart]]></Name>
+			<X>250</X>
+			<Y>50</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>40</Y>
+				</Point>
+			</Points>
+			<Properties Target="1341911822332"/>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341911822346</Id>
+			<Name><![CDATA[transition16]]></Name>
+			<X>200</X>
+			<Y>190</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>-50</X>
+					<Y>0</Y>
+				</Point>
+			</Points>
+			<IconOffset>19.0</IconOffset>
+			<Properties Source="1341911822334" Target="1341911822336" Trigger="arrival">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341912020491</Id>
+			<Name><![CDATA[transition]]></Name>
+			<X>100</X>
+			<Y>180</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>-80</Y>
+				</Point>
+				<Point>
+					<X>100</X>
+					<Y>-80</Y>
+				</Point>
+			</Points>
+			<IconOffset>84.0</IconOffset>
+			<Properties Source="1341911822336" Target="1341911822332" Trigger="timeout">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[loadTime]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>true</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+		<StatechartElement Class="Transition" ParentState="ROOT_NODE">
+			<Id>1341917293239</Id>
+			<Name><![CDATA[transition1]]></Name>
+			<X>250</X>
+			<Y>120</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Points>
+				<Point>
+					<X>0</X>
+					<Y>0</Y>
+				</Point>
+				<Point>
+					<X>0</X>
+					<Y>60</Y>
+				</Point>
+			</Points>
+			<IconOffset>24.0</IconOffset>
+			<Properties Source="1341911822332" Target="1341911822334" Trigger="condition">
+				<Action>time = delayedTasks.get(0).arrivalTime;
+destination = (TrackBuffer)delayedTasks.remove(0).agent;</Action>
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Condition>checkTask()</Condition>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<MessageType>Object</MessageType>
+				<DefaultTransition>true</DefaultTransition>
+				<FilterType>unconditionally</FilterType>
+				<EqualsExpression>"text"</EqualsExpression>
+				<SatisfiesExpression>true</SatisfiesExpression>
+			</Properties>
+		</StatechartElement>
+	</StatechartElements>
+	<Functions/>
+	<AnalysisData>
+		<Statistics>
+			<Id>1343805627992</Id>
+			<Name><![CDATA[statisticsDowntime]]></Name>
+			<X>-200</X>
+			<Y>400</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<Statistics>
+			<Id>1344591490092</Id>
+			<Name><![CDATA[taskWaitingTimeLoad]]></Name>
+			<X>-200</X>
+			<Y>370</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<Statistics>
+			<Id>1344591490108</Id>
+			<Name><![CDATA[taskWaitingTimeUnload]]></Name>
+			<X>-200</X>
+			<Y>340</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>true</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<Discrete>true</Discrete>
+		</Statistics>
+		<DataSet>
+			<Id>1346683815123</Id>
+			<Name><![CDATA[states]]></Name>
+			<X>-200</X>
+			<Y>520</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<AutoUpdate>false</AutoUpdate>
+			<OccurrenceAtTime>true</OccurrenceAtTime>
+			<OccurrenceDate>1429516800000</OccurrenceDate>
+			<OccurrenceTime Class="CodeUnitValue">
+				<Code><![CDATA[0]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</OccurrenceTime>
+			<RecurrenceCode Class="CodeUnitValue">
+				<Code><![CDATA[1]]></Code>
+				<Unit Class="TimeUnits">MINUTE</Unit>
+			</RecurrenceCode>
+			<FreezeXAxis>true</FreezeXAxis>
+			<VerticalAxisExpression>state</VerticalAxisExpression>
+			<SamplesToKeep>900</SamplesToKeep>
+		</DataSet>
+	</AnalysisData>
+	<AgentLinks>
+		<AgentLink>
+			<Id>1375200311851</Id>
+			<Name><![CDATA[connections]]></Name>
+			<X>50</X>
+			<Y>-50</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<OnReceive>delayedTasks.add(new Task(msg, time()));</OnReceive>
+			<HandleReceiveInConnections>false</HandleReceiveInConnections>
+			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+			<AgentLinkBidirectional>true</AgentLinkBidirectional>
+			<MessageType>TrackBuffer</MessageType>
+			<StatechartReference>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>AutoclaveTraverse</ClassName>
+				<ItemName>statechart</ItemName>
+			</StatechartReference>
+			<LineStyle>SOLID</LineStyle>
+			<LineWidth>1</LineWidth>
+			<LineColor>-16777216</LineColor>
+			<LineZOrder>UNDER_AGENTS</LineZOrder>
+			<LineArrow>NONE</LineArrow>
+			<LineArrowPosition>END</LineArrowPosition>
+		</AgentLink>
+	</AgentLinks>
+	<ContainerLinks>
+		<ContainerLink>
+			<Id>1395142873060</Id>
+			<Name><![CDATA[autoclaving]]></Name>
+			<X>50</X>
+			<Y>-100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ActiveObjectClass>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Autoclaving</ClassName>
+			</ActiveObjectClass>
+		</ContainerLink>
+		<ContainerLink>
+			<Id>1395142873061</Id>
+			<Name><![CDATA[main]]></Name>
+			<X>150</X>
+			<Y>-100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ActiveObjectClass>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Main</ClassName>
+			</ActiveObjectClass>
+		</ContainerLink>
+	</ContainerLinks>
+	<Presentation/>
+</ActiveObjectClass>

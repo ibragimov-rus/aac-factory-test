@@ -1,0 +1,1 @@
+return statechart.isStateActive(Disabled);

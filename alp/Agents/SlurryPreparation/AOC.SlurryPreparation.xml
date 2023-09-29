@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActiveObjectClass>
+	<Id>1343809901587</Id>
+	<Name><![CDATA[SlurryPreparation]]></Name>
+	<Generic>false</Generic>
+	<GenericParameter>
+		<Id>1429438648851</Id>
+		<Name><![CDATA[1429438648851]]></Name>
+		<GenericParameterValue Class="CodeValue">
+			<Code><![CDATA[T]]></Code>
+		</GenericParameterValue>
+		<GenericParameterLabel>Generic parameters:</GenericParameterLabel>
+	</GenericParameter>
+	<FlowChartsUsage>ENTITY</FlowChartsUsage>
+	<SamplesToKeep>100</SamplesToKeep>
+	<LimitNumberOfArrayElements>false</LimitNumberOfArrayElements>
+	<ElementsLimitValue>100</ElementsLimitValue>
+	<MakeDefaultViewArea>true</MakeDefaultViewArea>
+	<SceneGridColor/>
+	<SceneBackgroundColor/>
+	<SceneSkybox>null</SceneSkybox>
+	<AgentProperties>
+		<EnvironmentDefinesInitialLocation>true</EnvironmentDefinesInitialLocation>
+		<RotateAnimationTowardsMovement>true</RotateAnimationTowardsMovement>
+		<RotateAnimationVertically>false</RotateAnimationVertically>
+		<VelocityCode Class="CodeUnitValue">
+			<Code><![CDATA[10]]></Code>
+			<Unit Class="SpeedUnits">MPS</Unit>
+		</VelocityCode>
+		<PhysicalLength Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalLength>
+		<PhysicalWidth Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalWidth>
+		<PhysicalHeight Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="LengthUnits">METER</Unit>
+		</PhysicalHeight>
+	</AgentProperties>
+	<EnvironmentProperties>
+		<EnableSteps>false</EnableSteps>
+		<StepDurationCode Class="CodeUnitValue">
+			<Code><![CDATA[1.0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</StepDurationCode>
+		<SpaceType>CONTINUOUS</SpaceType>
+		<WidthCode>500</WidthCode>
+		<HeightCode>500</HeightCode>
+		<ZHeightCode>0</ZHeightCode>
+		<ColumnsCountCode>100</ColumnsCountCode>
+		<RowsCountCode>100</RowsCountCode>
+		<NeigborhoodType>MOORE</NeigborhoodType>
+		<LayoutType>USER_DEF</LayoutType>
+		<LayoutTypeApplyOnStartup>true</LayoutTypeApplyOnStartup>
+		<NetworkType>USER_DEF</NetworkType>
+		<NetworkTypeApplyOnStartup>true</NetworkTypeApplyOnStartup>
+		<ConnectionsPerAgentCode>2</ConnectionsPerAgentCode>
+		<ConnectionsRangeCode>50</ConnectionsRangeCode>
+		<NeighborLinkFractionCode>0.95</NeighborLinkFractionCode>
+		<MCode>10</MCode>
+	</EnvironmentProperties>
+	<DatasetsCreationProperties>
+		<AutoCreate>true</AutoCreate>
+		<OccurrenceAtTime>true</OccurrenceAtTime>
+		<OccurrenceDate>1429516800000</OccurrenceDate>
+		<OccurrenceTime Class="CodeUnitValue">
+			<Code><![CDATA[0]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</OccurrenceTime>
+		<RecurrenceCode Class="CodeUnitValue">
+			<Code><![CDATA[1]]></Code>
+			<Unit Class="TimeUnits">MINUTE</Unit>
+		</RecurrenceCode>
+	</DatasetsCreationProperties>
+	<ScaleRuler>
+		<Id>1429438648891</Id>
+		<Name><![CDATA[scale]]></Name>
+		<X>0</X>
+		<Y>-150</Y>
+		<PublicFlag>false</PublicFlag>
+		<PresentationFlag>false</PresentationFlag>
+		<ShowLabel>false</ShowLabel>
+		<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+		<Length>100</Length>
+		<Rotation>0</Rotation>
+		<ScaleType>EXPLICITLY_DEFINED</ScaleType>
+		<ModelLength>10</ModelLength>
+		<LengthUnits>METER</LengthUnits>
+		<Scale>8</Scale>
+		<InheritedFromParentAgentType>true</InheritedFromParentAgentType>
+	</ScaleRuler>
+	<CurrentLevel>1564077346895</CurrentLevel>
+	<ConnectionsId>1375200311884</ConnectionsId>
+	<Variables/>
+	<Dependences>
+		<Link SourceId="1343809917447" TargetId="1343809917402" Polarity="null">
+			<Height>160.16241866009887</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>280</X>
+				<Y>-80</Y>
+			</Direction>
+			<Id>1343809917412</Id>
+			<Name><![CDATA[moveTime - flow1]]></Name>
+			<X>50</X>
+			<Y>550</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917447" TargetId="1343809917404" Polarity="null">
+			<Height>-103.81171473916051</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>280</X>
+				<Y>-30</Y>
+			</Direction>
+			<Id>1343809917414</Id>
+			<Name><![CDATA[moveTime - flow2]]></Name>
+			<X>50</X>
+			<Y>550</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917477" TargetId="1343809917406" Polarity="null">
+			<Height>-20.151169186915027</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>100</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917416</Id>
+			<Name><![CDATA[mill - flow3]]></Name>
+			<X>490</X>
+			<Y>490</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917473" TargetId="1343809917402" Polarity="null">
+			<Height>39.02716322260782</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>130</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917418</Id>
+			<Name><![CDATA[sand - flow1]]></Name>
+			<X>200</X>
+			<Y>470</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917475" TargetId="1343809917404" Polarity="null">
+			<Height>-38.06243567831951</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>130</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917420</Id>
+			<Name><![CDATA[gypsum - flow2]]></Name>
+			<X>200</X>
+			<Y>520</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917481" TargetId="1343809917408" Polarity="null">
+			<Height>20.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>50</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917422</Id>
+			<Name><![CDATA[truckSand - flow]]></Name>
+			<X>100</X>
+			<Y>470</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917483" TargetId="1343809917410" Polarity="null">
+			<Height>-21.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>50</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917424</Id>
+			<Name><![CDATA[truckGypsum - flow4]]></Name>
+			<X>100</X>
+			<Y>520</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917450" TargetId="1343809917473" Polarity="null">
+			<Height>20.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>30</X>
+				<Y>80</Y>
+			</Direction>
+			<Id>1343809917426</Id>
+			<Name><![CDATA[sandStorageSize - sand]]></Name>
+			<X>170</X>
+			<Y>390</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917453" TargetId="1343809917475" Polarity="null">
+			<Height>-10.767602929482806</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>30</X>
+				<Y>-70</Y>
+			</Direction>
+			<Id>1343809917428</Id>
+			<Name><![CDATA[gypsumStorageSize - gypsum]]></Name>
+			<X>170</X>
+			<Y>590</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917479" TargetId="1343809917402" Polarity="null">
+			<Height>-35.78152506856824</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-360</X>
+				<Y>-20</Y>
+			</Direction>
+			<Id>1343809917430</Id>
+			<Name><![CDATA[slurry - flow1]]></Name>
+			<X>690</X>
+			<Y>490</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917479" TargetId="1343809917404" Polarity="null">
+			<Height>31.39311393044221</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-360</X>
+				<Y>30</Y>
+			</Direction>
+			<Id>1343809917432</Id>
+			<Name><![CDATA[slurry - flow2]]></Name>
+			<X>690</X>
+			<Y>490</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917473" TargetId="1343809917408" Polarity="null">
+			<Height>-31.709920264364886</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-50</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917434</Id>
+			<Name><![CDATA[sand - flow]]></Name>
+			<X>200</X>
+			<Y>470</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917475" TargetId="1343809917410" Polarity="null">
+			<Height>20.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-50</X>
+				<Y>0</Y>
+			</Direction>
+			<Id>1343809917436</Id>
+			<Name><![CDATA[gypsum - flow4]]></Name>
+			<X>200</X>
+			<Y>520</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917450" TargetId="1343809917408" Polarity="null">
+			<Height>-15.676017121775118</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-20</X>
+				<Y>80</Y>
+			</Direction>
+			<Id>1343809917438</Id>
+			<Name><![CDATA[sandStorageSize - flow]]></Name>
+			<X>170</X>
+			<Y>390</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917453" TargetId="1343809917410" Polarity="null">
+			<Height>11.202687432367213</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-20</X>
+				<Y>-70</Y>
+			</Direction>
+			<Id>1343809917440</Id>
+			<Name><![CDATA[gypsumStorageSize - flow4]]></Name>
+			<X>170</X>
+			<Y>590</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917471" TargetId="1343809917402" Polarity="null">
+			<Height>-21.613760178253116</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-110</X>
+				<Y>80</Y>
+			</Direction>
+			<Id>1343809917442</Id>
+			<Name><![CDATA[slurryStorageSize - flow1]]></Name>
+			<X>440</X>
+			<Y>390</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+		<Link SourceId="1343809917471" TargetId="1343809917404" Polarity="null">
+			<Height>20.0</Height>
+			<PolarityPosition>0.95</PolarityPosition>
+			<Direction>
+				<X>-110</X>
+				<Y>130</Y>
+			</Direction>
+			<Id>1343809917444</Id>
+			<Name><![CDATA[slurryStorageSize - flow2]]></Name>
+			<X>440</X>
+			<Y>390</Y>
+			<Label>
+				<X>40</X>
+				<Y>-50</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<Color/>
+			<LineWidth>1</LineWidth>
+			<Delay>false</Delay>
+		</Link>
+	</Dependences>
+	<Ports>
+		<Port>
+			<Id>1345459030955</Id>
+			<Name><![CDATA[port]]></Name>
+			<X>150</X>
+			<Y>100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>true</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>false</ShowLabel>
+			<IncomingMessageType>Object</IncomingMessageType>
+			<OutgoingMessageType>Object</OutgoingMessageType>
+			<CustomPort>false</CustomPort>
+		</Port>
+	</Ports>
+	<Events>
+		<Event>
+			<Id>1343809917394</Id>
+			<Name><![CDATA[arrivalRawMaterialSand]]></Name>
+			<X>-400</X>
+			<Y>260</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="userControls">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343032623079</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[5]]></Code>
+					<Unit Class="TimeUnits">HOUR</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[day()]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>truckSand+=sandArrivalQuantity;
+orderRawMaterialSand.restart();
+sandDeliveriesCount++;</Action>
+		</Event>
+		<Event>
+			<Id>1343809917396</Id>
+			<Name><![CDATA[orderRawMaterialSand]]></Name>
+			<X>-400</X>
+			<Y>230</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="condition" Mode="occuresOnce">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343034065298</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>sand+truckSand&lt;sandCriticalVolume</Condition>
+			</Properties>
+			<Action>arrivalRawMaterialSand.restart(sandDeliveryTime, HOUR);</Action>
+		</Event>
+		<Event>
+			<Id>1343809917398</Id>
+			<Name><![CDATA[arrivalRawMaterialGypsum]]></Name>
+			<X>-400</X>
+			<Y>320</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="timeout" Mode="userControls">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343032623079</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[5]]></Code>
+					<Unit Class="TimeUnits">HOUR</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[day()]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>false</Condition>
+			</Properties>
+			<Action>truckGypsum+=gypsumArrivalQuantity;
+orderRawMaterialGypsum.restart();
+gypsumDeliveriesCount++;</Action>
+		</Event>
+		<Event>
+			<Id>1343809917400</Id>
+			<Name><![CDATA[orderRawMaterialGypsum]]></Name>
+			<X>-400</X>
+			<Y>290</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="condition" Mode="occuresOnce">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343034065298</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>gypsum+truckGypsum&lt;gypsumCriticalVolume</Condition>
+			</Properties>
+			<Action>arrivalRawMaterialGypsum.restart(gypsumDeliveryTime, HOUR);</Action>
+		</Event>
+		<Event>
+			<Id>1345459083075</Id>
+			<Name><![CDATA[newCake]]></Name>
+			<X>90</X>
+			<Y>200</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<Properties TriggerType="condition" Mode="occuresOnce">
+				<Timeout Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</Timeout>
+				<Rate Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="RateUnits">PER_MINUTE</Unit>
+				</Rate>
+				<OccurrenceAtTime>true</OccurrenceAtTime>
+				<OccurrenceDate>1343032932741</OccurrenceDate>
+				<OccurrenceTime Class="CodeUnitValue">
+					<Code><![CDATA[0]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</OccurrenceTime>
+				<RecurrenceCode Class="CodeUnitValue">
+					<Code><![CDATA[1]]></Code>
+					<Unit Class="TimeUnits">MINUTE</Unit>
+				</RecurrenceCode>
+				<Condition>slurry &gt; slurryForCake</Condition>
+			</Properties>
+			<Action>slurry -= slurryForCake;
+sourceCake.inject(1);</Action>
+		</Event>
+	</Events>
+	<Functions/>
+	<AgentLinks>
+		<AgentLink>
+			<Id>1375200311884</Id>
+			<Name><![CDATA[connections]]></Name>
+			<X>50</X>
+			<Y>-50</Y>
+			<Label>
+				<X>15</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<HandleReceiveInConnections>false</HandleReceiveInConnections>
+			<AgentLinkType>COLLECTION_OF_LINKS</AgentLinkType>
+			<AgentLinkBidirectional>true</AgentLinkBidirectional>
+			<MessageType>Object</MessageType>
+			<LineStyle>SOLID</LineStyle>
+			<LineWidth>1</LineWidth>
+			<LineColor>-16777216</LineColor>
+			<LineZOrder>UNDER_AGENTS</LineZOrder>
+			<LineArrow>NONE</LineArrow>
+			<LineArrowPosition>END</LineArrowPosition>
+		</AgentLink>
+	</AgentLinks>
+	<ContainerLinks>
+		<ContainerLink>
+			<Id>1395142873069</Id>
+			<Name><![CDATA[main]]></Name>
+			<X>50</X>
+			<Y>-100</Y>
+			<Label>
+				<X>10</X>
+				<Y>0</Y>
+			</Label>
+			<PublicFlag>false</PublicFlag>
+			<PresentationFlag>true</PresentationFlag>
+			<ShowLabel>true</ShowLabel>
+			<ActiveObjectClass>
+				<PackageName>aac_factory</PackageName>
+				<ClassName>Main</ClassName>
+			</ActiveObjectClass>
+		</ContainerLink>
+	</ContainerLinks>
+	<EmbeddedObjects/>
+	<Presentation/>
+</ActiveObjectClass>
